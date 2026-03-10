@@ -1,0 +1,46 @@
+purchase = input("what do you want to purchase from our dog store?")
+total = []
+cart = ()
+item = [
+    {
+    "name":"Golden Retriever",
+    "price": 1500,
+    "description":"a medium-to-large dog, athletic",
+    },
+    {
+    "name":"Border Collie",
+    "price": 800,
+    "description":"a medium sized dog, high energy",
+    },
+    {
+    "name":"Dachshunds",
+    "price": 500,
+    "description":"a small sized dog, low maintenance",
+    },
+    {
+    "name":"German Shepherd",
+    "price": 1500,
+    "description":"a large sized dog, protective",
+    }
+]
+price1 = (item)
+goldenretriever = (item[0]["name"])
+bordercollie = (item[1]["name"])
+dachshunds = (item[2]["name"])
+germanshepherd = (item[3]["name"])
+dogs = (goldenretriever,bordercollie,dachshunds,germanshepherd)
+def shop():
+    for purchase in item:
+        dog = print(input("we have a golden retrievers, border collies, dachshunds, and german shepherds"))
+        if dog == "goldenretriever":
+            input(item[0]["name"]) in cart.append()
+            input(item[0]["price"]) in total.append()
+        con = print(input("would you like to continue"))
+        print(cart)
+        if con == "no":
+            print(cart)
+            print(total)
+        elif con == "yes":
+            shop()
+
+shop()

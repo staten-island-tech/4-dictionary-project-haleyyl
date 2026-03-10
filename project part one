@@ -1,0 +1,26 @@
+purchase = input("what do you want to purchase from our dog store?")
+total = ["price"]
+cart = []
+item = [
+    {
+    "name":"Golden Retriever",
+    "price": 1500,
+    "description":"a medium-to-large dog and athletic",
+    },
+    {
+    "name":"Bone Toy",
+    "price": 8.99,
+    "description":"Bone shaped chew toy that squeaks",
+    },
+    {
+    "name":"Dog Jacket",
+    "price": 19.99,
+    "description":"medium-to-large sized jacket for dogs",
+    }
+]
+if purchase == "dog":
+    print(item[0]["name"])
+elif purchase == "toy":
+    print(item[1]["name"])
+elif purchase == "clothes":
+    print(item[0]["name"])
