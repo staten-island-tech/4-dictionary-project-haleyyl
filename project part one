@@ -23,4 +23,4 @@ if purchase == "dog":
 elif purchase == "toy":
     print(item[1]["name"])
 elif purchase == "clothes":
-    print(item[0]["name"])
+    print(item[2]["name"])

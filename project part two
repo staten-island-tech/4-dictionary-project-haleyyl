@@ -1,6 +1,4 @@
-purchase = input("what do you want to purchase from our dog store?")
-total = []
-cart = ()
+
 item = [
     {
     "name":"Golden Retriever",
@@ -23,24 +21,50 @@ item = [
     "description":"a large sized dog, protective",
     }
 ]
-price1 = (item)
+total = []
+cart = []
 goldenretriever = (item[0]["name"])
 bordercollie = (item[1]["name"])
 dachshunds = (item[2]["name"])
 germanshepherd = (item[3]["name"])
+goldenretrieverprice = (item[0]["price"])
+bordercollieprice = (item[1]["price"])
+dachshundsprice = (item[2]["price"])
+germanshepherdprice = (item[3]["price"])
 dogs = (goldenretriever,bordercollie,dachshunds,germanshepherd)
+purchase = print(input("what do you want to purchase from our dog store?"))
 def shop():
-    for purchase in item:
-        dog = print(input("we have a golden retrievers, border collies, dachshunds, and german shepherds"))
-        if dog == "goldenretriever":
-            input(item[0]["name"]) in cart.append()
-            input(item[0]["price"]) in total.append()
-        con = print(input("would you like to continue"))
+    dog = print(input("we have a golden retrievers, border collies, dachshunds, and german shepherds"))
+    if dog == "golden retriever":
+        cart.append(goldenretriever)
+        total.append(goldenretrieverprice)
+    elif dog == "border collie":
+        cart.append(bordercollie)
+        total.append(bordercollieprice)
+    elif dog == "dachshunds":
+        cart.append(dachshunds)
+        total.append(dachshundsprice)
+    elif dog == "german shepherd":
+        cart.append(germanshepherd)
+        total.append(germanshepherdprice)
+    con = print(input("would you like to continue"))
+    if con == "no":
         print(cart)
-        if con == "no":
-            print(cart)
-            print(total)
-        elif con == "yes":
-            shop()
+        print(total)
+    if con == "yes":
+        dog = print(input("we have a golden retrievers, border collies, dachshunds, and german shepherds"))
+        if dog == "golden retriever":
+            cart.append(goldenretriever)
+            total.append(goldenretrieverprice)
+        elif dog == "border collie":
+            cart.append(bordercollie)
+            total.append(bordercollieprice)
+        elif dog == "dachshunds":
+            cart.append(dachshunds)
+            total.append(dachshundsprice)
+        elif dog == "german shepherd":
+            cart.append(germanshepherd)
+            total.append(germanshepherdprice)
+
 
 shop()
