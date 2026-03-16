@@ -21,9 +21,8 @@ item = [
     "description":"a large sized dog, protective",
     }
 ]
-total = []
-cart = []
-goldenretriever = (item[0]["name"])
+
+''' goldenretriever = (item[0]["name"])
 bordercollie = (item[1]["name"])
 dachshunds = (item[2]["name"])
 germanshepherd = (item[3]["name"])
@@ -31,40 +30,29 @@ goldenretrieverprice = (item[0]["price"])
 bordercollieprice = (item[1]["price"])
 dachshundsprice = (item[2]["price"])
 germanshepherdprice = (item[3]["price"])
-dogs = (goldenretriever,bordercollie,dachshunds,germanshepherd)
-purchase = print(input("what do you want to purchase from our dog store?"))
+dogs = (goldenretriever,bordercollie,dachshunds,germanshepherd) '''
+number = []
+cart = []
+purchase = input("what do you want to purchase from our dog store?")
 def shop():
-    dog = print(input("we have a golden retrievers, border collies, dachshunds, and german shepherds"))
+    dog = input("we have a golden retrievers, border collies, dachshunds, and german shepherds")
     if dog == "golden retriever":
-        cart.append(goldenretriever)
-        total.append(goldenretrieverprice)
-    elif dog == "border collie":
-        cart.append(bordercollie)
-        total.append(bordercollieprice)
-    elif dog == "dachshunds":
-        cart.append(dachshunds)
-        total.append(dachshundsprice)
-    elif dog == "german shepherd":
-        cart.append(germanshepherd)
-        total.append(germanshepherdprice)
-    con = print(input("would you like to continue"))
+        cart.append(item[0]["name"])
+        number.append(item[0]["price"])
+    if dog == "border collie":
+        cart.append(item[1]["name"])
+        number.append(item[1]["price"])
+    if dog == "dachshunds":
+        cart.append(item[2]["name"])
+        number.append(item[2]["price"])
+    if dog == "german shepherd":
+        cart.append(item[3]["name"])
+        number.append(item[3]["price"])
+    con = input("would you like to continue")
     if con == "no":
         print(cart)
-        print(total)
+        print(sum(number))
     if con == "yes":
-        dog = print(input("we have a golden retrievers, border collies, dachshunds, and german shepherds"))
-        if dog == "golden retriever":
-            cart.append(goldenretriever)
-            total.append(goldenretrieverprice)
-        elif dog == "border collie":
-            cart.append(bordercollie)
-            total.append(bordercollieprice)
-        elif dog == "dachshunds":
-            cart.append(dachshunds)
-            total.append(dachshundsprice)
-        elif dog == "german shepherd":
-            cart.append(germanshepherd)
-            total.append(germanshepherdprice)
-
+        shop()
 
 shop()
