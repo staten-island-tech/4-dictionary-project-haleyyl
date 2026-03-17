@@ -42,7 +42,7 @@ def shop():
     if dog == "border collie":
         cart.append(item[1]["name"])
         number.append(item[1]["price"])
-    if dog == "dachshunds":
+    if dog == "dachshund":
         cart.append(item[2]["name"])
         number.append(item[2]["price"])
     if dog == "german shepherd":
