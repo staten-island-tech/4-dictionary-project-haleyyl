@@ -48,7 +48,7 @@ def shop():
     if dog == "german shepherd":
         cart.append(item[3]["name"])
         number.append(item[3]["price"])
-    con = input("would you like to continue")
+    con = input("would you like to continue(yes)")
     if con == "no":
         print(cart)
         print(sum(number))
