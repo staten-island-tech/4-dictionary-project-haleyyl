@@ -1,5 +1,5 @@
 
-item = [
+item = [ # dictionary 
     {
     "name":"Golden Retriever",
     "price": 1500,
@@ -22,23 +22,23 @@ item = [
     }
 ]
 def showDogs(item):
-    for index,item in enumerate(item):
-        print(index,":", item["name"])
+    for index,item in enumerate(item): # organizes the dictiony
+        print(index,":", item["name"]) # lists them in number (starting with 0)
 
 def buying():
     cart = []
     money = []
     showDogs(item)
     purchase = int(input("what dog would you like to purchase"))
-    cart.append(item[purchase]["name"])
-    money.append(item[purchase]["price"])
-    ask = (input("would you like to continue?"))
-    while ask == "yes":
+    cart.append(item[purchase]["name"]) # inputs the purchase name in cart
+    money.append(item[purchase]["price"]) # inputs the amount/price of the dog in money
+    ask = (input("would you like to continue?")) # asks if user is done shopping
+    while ask == "yes": # while user says yes repeat process 
         purchase = int(input("what dog would you like to purchase"))
         cart.append(item[purchase]["name"])
         money.append(item[purchase]["price"])
         ask = (input("would you like to continue?"))
-    if ask == "no":
+    if ask == "no": # if user is finished shopping and says no prints cart and money
         print(cart)
-        print(sum(money))
+        print(sum(money)) # adds up all numbers in money and prints the sum
 buying()
